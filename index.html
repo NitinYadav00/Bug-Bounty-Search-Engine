@@ -6,9 +6,9 @@
     body {
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        overflow: auto;
     }
-    
+             
     .background-video {
         position: fixed;
         top: 0;
@@ -96,6 +96,41 @@
     margin: 0 auto;
   }
 
+.input-container {
+  display: flex;
+  align-items: center; /* Vertically align elements */
+  justify-content: center; /* Horizontally center elements */
+  width: 400px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container on the page */
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #2452aa52;
+  border: 1px solid #26d2d2;
+}
+
+.input-container label {
+  margin-right: 10px; /* Add some space between label and input */
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+}
+
+.input-container input {
+  padding: 7px;
+  border: 1px aqua solid;
+  color: #ff86ff;
+  outline: none;
+  font-size: 16px;
+  background: #625dec36;
+
+}
+       
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  
     </style>
     <script>
     function googleSearch(type) {
@@ -358,10 +393,15 @@
         </video>
     </div>
     <h1 style="text-align: center; color: #ffffff; margin-top: 50px;">Search Engine For Bug Bounty Hunters</h1>
-    <h2 style="display: flex;  color: #ffffff; margin-top: 20px;" for="target">Enter Target Domain:</h2>
-    <input type="text; margin-top: 20px;" id="target">
+
+    <div class="input-container">
+      <label for="target">Enter Target Domain:</label>
+      <input type="text" id="target" name="target" placeholder="example.com" required="">
+    </div>
+    
     <br>
     <br>
+    <div class="buttons">
     <button class="futuristic-button" onclick="googleSearch(1)">Directory listing vulnerabilities</button>
     <button class="futuristic-button" onclick="googleSearch(2)">Exposed Configuration files</button>
     <button class="futuristic-button" onclick="googleSearch(3)">Exposed Database files</button>
@@ -426,6 +466,7 @@
     <button class="futuristic-button" onclick="googleSearch(62)">Sensitive File</button>
     <button class="futuristic-button" onclick="googleSearch(63)">Sensitive File</button>
     <button class="futuristic-button" onclick="googleSearch(64)">Directories containing SQL Installs and/or SQL databases</button>
+</div>
 <br>
 <br>
 <div style="display: flex; justify-content: center;">
